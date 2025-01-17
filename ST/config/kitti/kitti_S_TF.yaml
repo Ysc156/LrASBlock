@@ -1,0 +1,87 @@
+DATA:
+  data_name: semantic_kitti
+  data_root: /home/yansh/codes/Stratified-Transformer/data/semantic_kitti/dataset
+  classes: 19
+  fea_dim: 4
+  voxel_size: 0.04
+  voxel_max: 80000
+  loop: 1
+
+TRAIN:
+  #arch
+  arch: stratified_transformer
+  stem_transformer: True
+  use_xyz: True
+  sync_bn: True  # adopt sync_bn or not
+  rel_query: True
+  rel_key: True
+  rel_value: True
+  quant_size: 0.01
+  downsample_scale: 8
+  num_layers: 4 
+  patch_size: 1 
+  window_size: 4
+  depths: [2, 2, 6, 2] 
+  channels: [48, 96, 192, 384] 
+  num_heads: [3, 6, 12, 24] 
+  up_k: 3
+  drop_path_rate: 0.3
+  concat_xyz: True
+  grid_size: 0.02
+  max_batch_points: 800000
+  max_num_neighbors: 34 # For KPConv
+  ratio: 0.25
+  k: 16
+
+  # training
+  train_mod: 
+  aug: True
+  milestones: "50,80"
+  transformer_lr_scale: 0.1
+  jitter_sigma: 0.005
+  jitter_clip: 0.02
+  scheduler_update: epoch 
+  scheduler: MultiStep 
+  warmup: linear
+  warmup_iters: 1500
+  warmup_ratio: 0.000001
+  use_amp: True
+  optimizer: AdamW
+  ignore_label: 255
+  train_gpu: [0,1,2,3]
+  workers: 16  # data loader workers
+  batch_size: 32  # batch size for training
+  batch_size_val: 8  # batch size for validation during training, memory and speed tradeoff
+  base_lr: 0.006
+  epochs: 35
+  start_epoch: 0
+  step_epoch: 30
+  multiplier: 0.1
+  momentum: 0.9
+  weight_decay: 0.01
+  drop_rate: 0.5
+  manual_seed: 123
+  print_freq: 1
+  save_freq: 1
+  save_path: runs_kitti/kitti_stratified_transformer
+  weight:  # path to initial weight (default: none)
+  resume: "/home/yansh/codes/Stratified-Transformer/runs_kitti/kitti_stratified_transformer/model/model_best.pth"
+  evaluate: True  # evaluate on validation set, extra gpu memory needed and small batch_size_val is recommend
+  eval_freq: 1
+Distributed:
+  dist_url: tcp://127.0.0.1:6789
+  dist_backend: 'nccl'
+  multiprocessing_distributed: True
+  world_size: 1
+  rank: 0
+
+TEST:
+  # test_list: dataset/s3dis/list/val5.txt
+  # test_list_full: dataset/s3dis/list/val5_full.txt
+  split: test  # split in [train, val and test]
+  test_gpu: [7]
+  test_workers: 16
+  batch_size_test: 15
+  model_path: runs_kitti/kitti_stratified_transformer/model/model_best.pth
+  save_folder: runs_kitti/kitti_stratified_transformer/test
+  names_path: data/semantic_kitti/kitti_names.txt

@@ -1,0 +1,15 @@
+# ninja log v5
+1	4738	1687418175368351705	/home/yansh/codes/Stratified-Transformer/lib/pointops/build/temp.linux-x86_64-cpython-37/src/grouping_int/grouping_int_cuda.o	b28beefffc87fd1e
+1	4883	1687418175516354906	/home/yansh/codes/Stratified-Transformer/lib/pointops/build/temp.linux-x86_64-cpython-37/src/interpolation/interpolation_cuda.o	c575bb2425219b23
+1	5117	1687418175748359924	/home/yansh/codes/Stratified-Transformer/lib/pointops/build/temp.linux-x86_64-cpython-37/src/grouping/grouping_cuda.o	627bca7092c63227
+3	5197	1687418175828361655	/home/yansh/codes/Stratified-Transformer/lib/pointops/build/temp.linux-x86_64-cpython-37/src/sampling/sampling_cuda.o	eb171850fbc7815a
+1	12327	1687418182948515670	/home/yansh/codes/Stratified-Transformer/lib/pointops/build/temp.linux-x86_64-cpython-37/src/ballquery/ballquery_cuda_kernel.o	2a6c1d23c8544382
+1	12628	1687418183252522246	/home/yansh/codes/Stratified-Transformer/lib/pointops/build/temp.linux-x86_64-cpython-37/src/grouping/grouping_cuda_kernel.o	2b7d2b3e75dad9cf
+2	12668	1687418183296523198	/home/yansh/codes/Stratified-Transformer/lib/pointops/build/temp.linux-x86_64-cpython-37/src/knnquery_heap/knnquery_heap_cuda_kernel.o	2dc6c9c025caae8f
+2	12751	1687418183376524928	/home/yansh/codes/Stratified-Transformer/lib/pointops/build/temp.linux-x86_64-cpython-37/src/knnquery/knnquery_cuda_kernel.o	3115aa164432a2bf
+1	12910	1687418183532528303	/home/yansh/codes/Stratified-Transformer/lib/pointops/build/temp.linux-x86_64-cpython-37/src/featuredistribute/featuredistribute_cuda_kernel.o	3174dc8320b07bd8
+3	13009	1687418183636530553	/home/yansh/codes/Stratified-Transformer/lib/pointops/build/temp.linux-x86_64-cpython-37/src/sampling/sampling_cuda_kernel.o	8ad0e410c3fcba6
+1	13108	1687418183732532629	/home/yansh/codes/Stratified-Transformer/lib/pointops/build/temp.linux-x86_64-cpython-37/src/grouping_int/grouping_int_cuda_kernel.o	923d878e9af3b2c8
+2	13175	1687418183796534014	/home/yansh/codes/Stratified-Transformer/lib/pointops/build/temp.linux-x86_64-cpython-37/src/interpolation/interpolation_cuda_kernel.o	7b606ec456700707
+2	13273	1687418183896536177	/home/yansh/codes/Stratified-Transformer/lib/pointops/build/temp.linux-x86_64-cpython-37/src/labelstat/labelstat_cuda_kernel.o	ec09e451f4f0be82
+2	18885	1687418189508657582	/home/yansh/codes/Stratified-Transformer/lib/pointops/build/temp.linux-x86_64-cpython-37/src/pointops_api.o	d1c96d97ad844257

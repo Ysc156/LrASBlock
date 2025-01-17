@@ -1,0 +1,84 @@
+DATA:
+  data_name: scannetv2
+  data_root: data/scannetv2
+  classes: 20
+  fea_dim: 6
+  voxel_size: 0.02 
+  voxel_max: 120000 
+  loop: 6 
+
+TRAIN:
+  # arch
+  arch: stratified_transformer_skip
+  stem_transformer: False
+  use_xyz: True
+  sync_bn: True  # adopt sync_bn or not
+  rel_query: True
+  rel_key: True
+  rel_value: True
+  quant_size: 0.005
+  downsample_scale: 4 
+  num_layers: 5 
+  patch_size: 1 
+  window_size: 5 
+  depths: [3,3,9,3,3] 
+  channels: [48, 96, 192, 384, 384] 
+  num_heads: [3, 6, 12, 24, 24]
+  up_k: 3
+  drop_path_rate: 0.3
+  concat_xyz: True
+  grid_size: 0.02
+  max_batch_points: 500000
+  max_num_neighbors: 34 # For KPConv
+  ratio: 0.25
+  k: 16
+
+  # training
+  train_mod: f_t
+  aug: True
+  transformer_lr_scale: 0.1 
+  scheduler_update: epoch 
+  scheduler: MultiStep
+  warmup: linear
+  warmup_iters: 3000
+  warmup_ratio: 0.000001
+  use_amp: True
+  optimizer: AdamW #SGD
+  train_gpu: [1,2,3,4,5,6]
+  workers: 16  # data loader workers
+  batch_size: 12 # batch size for training
+  batch_size_val: 6 # batch size for validation during training, memory and speed tradeoff
+  base_lr: 0.006
+  epochs: 50
+  start_epoch: 0
+  step_epoch: 30
+  multiplier: 0.1
+  momentum: 0.9
+  weight_decay: 0.05
+  drop_rate: 0.5
+
+  ignore_label: -100 #255
+  manual_seed: 123
+  print_freq: 1
+  save_freq: 1
+  save_path: runs_sacnnetv2/stratified_transformer_skip
+  weight:  # path to initial weight (default: none)
+  resume:  runs_sacnnetv2/stratified_transformer/model/model_best.pth
+  evaluate: True  # evaluate on validation set, extra gpu memory needed and small batch_size_val is recommend
+  eval_freq: 1
+Distributed:
+  dist_url: tcp://127.0.0.1:6789
+  dist_backend: 'nccl'
+  multiprocessing_distributed: True
+  world_size: 1
+  rank: 0
+
+TEST:
+  data_root_val: data/scannetv2/val
+  split: val  # split in [train, val and test]
+  test_gpu: [0]
+  test_workers: 4
+  batch_size_test: 4
+  model_path: runs_sacnnetv2/stratified_transformer_skip/model/model_best.pth
+  save_folder: runs_sacnnetv2/stratified_transformer_skip
+  names_path: data/scannetv2/scannet_names.txt

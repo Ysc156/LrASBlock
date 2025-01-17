@@ -1,0 +1,23 @@
+# ninja log v5
+117	3034	6887500958051615	E:/YSC/experiments/Ysc/Stratified-Transformer/lib/pointops2/build/temp.win-amd64-3.9/Release/src/rpe/relative_pos_encoding_cuda.obj	e31ae5955c95d6d1
+124	3084	6887500958460244	E:/YSC/experiments/Ysc/Stratified-Transformer/lib/pointops2/build/temp.win-amd64-3.9/Release/src/rpe_v2/relative_pos_encoding_cuda_v2.obj	b1c9bb8d3a345fe2
+107	3116	6887500958470201	E:/YSC/experiments/Ysc/Stratified-Transformer/lib/pointops2/build/temp.win-amd64-3.9/Release/src/knnquery/knnquery_cuda.obj	c5cf48fd71211f37
+100	3148	6887500958480170	E:/YSC/experiments/Ysc/Stratified-Transformer/lib/pointops2/build/temp.win-amd64-3.9/Release/src/interpolation/interpolation_cuda.obj	b3de245e36d9b708
+96	3178	6887500958490143	E:/YSC/experiments/Ysc/Stratified-Transformer/lib/pointops2/build/temp.win-amd64-3.9/Release/src/grouping/grouping_cuda.obj	9df4f65b17d59739
+93	3211	6887500958500103	E:/YSC/experiments/Ysc/Stratified-Transformer/lib/pointops2/build/temp.win-amd64-3.9/Release/src/attention_v2/attention_cuda_v2.obj	142c7431ad862c78
+4	3242	6887500958500103	E:/YSC/experiments/Ysc/Stratified-Transformer/lib/pointops2/build/temp.win-amd64-3.9/Release/src/aggregation/aggregation_cuda.obj	2bcbe87aa44d2f32
+126	3265	6887500958789135	E:/YSC/experiments/Ysc/Stratified-Transformer/lib/pointops2/build/temp.win-amd64-3.9/Release/src/sampling/sampling_cuda.obj	6888a50ff35ff959
+132	3291	6887500959367211	E:/YSC/experiments/Ysc/Stratified-Transformer/lib/pointops2/build/temp.win-amd64-3.9/Release/src/subtraction/subtraction_cuda.obj	b468cbefd3e35e9e
+89	3315	6887500960095079	E:/YSC/experiments/Ysc/Stratified-Transformer/lib/pointops2/build/temp.win-amd64-3.9/Release/src/attention/attention_cuda.obj	2b791872bda8afed
+114	6231	6887500990064622	E:/YSC/experiments/Ysc/Stratified-Transformer/lib/pointops2/build/temp.win-amd64-3.9/Release/src/pointops_api.obj	ce5810cc1fffeb96
+128	13475	6888030310825805	E:/YSC/experiments/Ysc/Stratified-Transformer/lib/pointops2/build/temp.win-amd64-3.9/Release/src/pointops_api.obj	326c2f2f4895bec1
+111	19764	6888030373326809	E:/YSC/experiments/Ysc/Stratified-Transformer/lib/pointops2/build/temp.win-amd64-3.9/Release/src/attention/attention_cuda_kernel.obj	94799b8762c3fdd6
+131	19923	6888030374183944	E:/YSC/experiments/Ysc/Stratified-Transformer/lib/pointops2/build/temp.win-amd64-3.9/Release/src/rpe/relative_pos_encoding_cuda_kernel.obj	6906062706933715
+113	20010	6888030375409847	E:/YSC/experiments/Ysc/Stratified-Transformer/lib/pointops2/build/temp.win-amd64-3.9/Release/src/attention_v2/attention_cuda_kernel_v2.obj	956a3a7270d776f7
+145	20089	6888030376286914	E:/YSC/experiments/Ysc/Stratified-Transformer/lib/pointops2/build/temp.win-amd64-3.9/Release/src/subtraction/subtraction_cuda_kernel.obj	63fad323e1a2b8cf
+118	20163	6888030377313481	E:/YSC/experiments/Ysc/Stratified-Transformer/lib/pointops2/build/temp.win-amd64-3.9/Release/src/grouping/grouping_cuda_kernel.obj	fa07a5fcd623131f
+123	20217	6888030377592546	E:/YSC/experiments/Ysc/Stratified-Transformer/lib/pointops2/build/temp.win-amd64-3.9/Release/src/interpolation/interpolation_cuda_kernel.obj	6e9c1699a732b660
+126	20260	6888030377582575	E:/YSC/experiments/Ysc/Stratified-Transformer/lib/pointops2/build/temp.win-amd64-3.9/Release/src/knnquery/knnquery_cuda_kernel.obj	3e51db7d002a19bf
+109	20322	6888030377941372	E:/YSC/experiments/Ysc/Stratified-Transformer/lib/pointops2/build/temp.win-amd64-3.9/Release/src/aggregation/aggregation_cuda_kernel.obj	529a1d58218378b6
+141	20354	6888030377652358	E:/YSC/experiments/Ysc/Stratified-Transformer/lib/pointops2/build/temp.win-amd64-3.9/Release/src/sampling/sampling_cuda_kernel.obj	3f5607b98b1e6e7b
+133	20394	6888030378828419	E:/YSC/experiments/Ysc/Stratified-Transformer/lib/pointops2/build/temp.win-amd64-3.9/Release/src/rpe_v2/relative_pos_encoding_cuda_kernel_v2.obj	d67502013e7d4641
