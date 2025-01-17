@@ -33,9 +33,6 @@ class Scannetv2(Dataset):
         print("Totally {} samples in {} set.".format(len(self.data_list), split))
 
     def __getitem__(self, idx):
-        # data_idx = self.data_idx[idx % len(self.data_idx)]
-
-        # data = SA.attach("shm://{}".format(self.data_list[data_idx])).copy()
         data_idx = idx % len(self.data_list)
         data_path = self.data_list[data_idx]
         data = torch.load(data_path)
@@ -48,7 +45,6 @@ class Scannetv2(Dataset):
         return coord, feat, label
 
     def __len__(self):
-        # return len(self.data_idx) * self.loop
         return len(self.data_list) * self.loop
 
 

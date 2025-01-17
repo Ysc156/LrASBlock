@@ -55,9 +55,6 @@ def collate_fn_limit_mix3d(batch, max_batch_points, logger, p):
         return torch.cat(coord_mix3d), torch.cat(feat_mix3d), torch.cat(label_mix3d), torch.IntTensor(offset_mix3d)
 
     return torch.cat(coord[:k]), torch.cat(feat[:k]), torch.cat(label[:k]), torch.IntTensor(offset[:k])
-    # return torch.cat(coord), torch.cat(feat), torch.cat(label), torch.IntTensor(offset)
-    # return torch.cat(coord_mix3d), torch.cat(feat_mix3d), torch.cat(label_mix3d), torch.IntTensor(offset_mix3d)
-
 
 def collate_fn_limit(batch, max_batch_points, logger):
     coord, feat, label = list(zip(*batch))

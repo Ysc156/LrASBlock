@@ -1,4 +1,3 @@
-// An highlighted block
 #coding:utf-8
 #!/usr/bin/env python
 # Downloads ScanNet public data release
